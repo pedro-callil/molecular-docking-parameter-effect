@@ -5,11 +5,12 @@ Nesse repositório temos os arquivos (`.pdb`, `.sdf`, `.top`, entre outros)
 [[1]](#1) que armazenam as moléculas (receptores e ligantes) utilizados no projeto.
 Além disso, temos alguns _scripts_ para automatizar o processo de conversão
 dos arquivos fornecidos para um formato utilizável pelo programa
-_AutoDock Vina_[[2]](#2), utilizando o programa _OpenBabel_[[3]](#3).
+_AutoDock Vina_[[2]](#2), utilizando o programa _OpenBabel_[[3]](#3),
+e também para automatizar as simulações de _docking_ em grande
+quantidade de sistemas receptor-ligante.
 
-Planeja-se a adição de programas paa automatizar a execução de simulações
-de dinâmica molecular com o uso do GROMACS [[4]](#4), e de programas para
-automatizar as simulações de _docking_.
+Planeja-se a adição futura de programas paa automatizar a execução de simulações
+de dinâmica molecular com o uso do GROMACS [[4]](#4).
 
 Autoria (_Scripts_)
 -------------------
