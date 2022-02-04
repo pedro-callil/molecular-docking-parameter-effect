@@ -16,7 +16,12 @@ do
 	sims_ok=$(du $dir/*.pdbqt | grep -v eqeq | grep -v ^0 | wc -l)
 	if [ "$sims_ok" == "$max_sims_ok" ];
 	then
-		cp -r $dir $charge_root_dir
+		mkdir $charge_root_dir$(basename $dir)
+		for file in $dir/*.pdbqt;
+		do
+			cp $file $charge_root_dir$(basename $dir)
+		done
+		cp $dir/grid.conf $charge_root_dir$(basename $dir)
 	fi
 done
 
