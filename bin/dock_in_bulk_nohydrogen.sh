@@ -1,7 +1,8 @@
 #! /bin/bash
 
 # This script is a wrapper for the docking program. It docks several pairs
-# automatically, splitting the resulting conformations.
+# automatically, splitting the resulting conformations. (Now we use ligands
+# with hydrogen atoms removed).
 
 # This function splits the conformations found in Vina's output .pdbqt.
 function split_out () {
@@ -20,20 +21,14 @@ for system_dir in $charge_dir/*; do
 
 	cd $system_dir
 	echo $system_dir
-	rm *_eqeq_*
-
-	for file in *.pdbqt;
-	do
-		file_name=$(echo $file | cut -d '_' -f 2-)
-		mv $file $file_name
-	done
+	rm *eqeq*
 
 	for charge in {none,qeq,qtpie,eem,eem2015ha,mmff94,gasteiger};
 	do
-		$bin_dir/vina_wrapper.sh receptor_${charge}_hydrogen ligand_${charge}
-		split_out out_receptor_${charge}_hydrogen_ligand_${charge}.pdbqt
-		$bin_dir/vina_wrapper.sh receptor_${charge}_nohydrogen ligand_${charge}
-		split_out out_receptor_${charge}_nohydrogen_ligand_${charge}.pdbqt
+		$bin_dir/vina_wrapper.sh receptor_${charge}_hydrogen ligand_nohydrogen_${charge}
+		split_out out_receptor_${charge}_hydrogen_ligand_nohydrogen_${charge}.pdbqt
+		$bin_dir/vina_wrapper.sh receptor_${charge}_nohydrogen ligand_nohydrogen_${charge}
+		split_out out_receptor_${charge}_nohydrogen_ligand_nohydrogen_${charge}.pdbqt
 	done
 done
 

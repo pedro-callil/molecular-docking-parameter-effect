@@ -1,5 +1,8 @@
 #! /bin/bash
 
+# This is a wrapper for OpenBabel. It adds charges and deal with hydrogens
+# in bulk.
+
 # we need this to avoid spawning thousands (literally!)
 # of computationally intensive jobs, which would either
 # freeze the system or trigger the OOM-killer.

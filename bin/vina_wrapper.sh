@@ -1,5 +1,7 @@
 #! /bin/bash
 
+# This script calls vina with the box arguments found in file grid.conf
+
 RECEPTOR="$1" # receptor file to be used
 LIGAND="$2" # ligand file to be used
 
@@ -21,9 +23,5 @@ vina --cpu 16 \
 	--ligand "$LIGAND".pdbqt \
 	--out out_"$RECEPTOR"_"$LIGAND".pdbqt \
 	--receptor "$RECEPTOR".pdbqt >> log_"$RECEPTOR"_"$LIGAND".log
-
-# find average and standard deviation of affinity
-#cat log_"$RECEPTOR"_"$LIGAND".log | sed -e "s/[\t\ ]\+/,/g" | \
-#	grep ^,1 | cut -d ',' -f 3 | datamash mean 1 sstdev 1
 
 

@@ -1,5 +1,8 @@
 #! /bin/bash
 
+# This script creates a directory and fills it with all receptor-ligand
+# pairs to which charges and hydrogens atoms were successfully added/removed.
+
 max_sims_ok=21 # 7 different charge models considered; EQEq discarded
 testing_root_dir="$(git rev-parse --show-toplevel)/files_for_docking/"
 charge_root_dir="$(git rev-parse --show-toplevel)/files_for_charge_comparison/"
