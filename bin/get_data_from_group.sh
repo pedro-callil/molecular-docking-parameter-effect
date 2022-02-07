@@ -86,6 +86,6 @@ ${results}"
 done
 
 echo "$all_results" | grep -v '^$' | cut -d ' ' -f 2 | \
-	datamash count 1 mean 1 sstdev 1 min 1 max 1 -t ' '
+	datamash count 1 mean 1 sstdev 1 min 1 max 1 -t ' ' --format="%.6f"
 
 
