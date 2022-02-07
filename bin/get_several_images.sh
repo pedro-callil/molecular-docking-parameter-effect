@@ -36,11 +36,11 @@ do
 	mkdir $images_dir/$system
 	echo "Best fit: $best" > $images_dir/$system/log
 	echo "Worst fit: $worst" >> $images_dir/$system/log
-	$bin_dir/get_image.py receptor_gasteiger_hydrogen.pdbqt \
-		$best \
+	$bin_dir/get_image.py $best \
+		ligand_gasteiger.pdbqt \
 		$images_dir/$system/best.png 0
-	$bin_dir/get_image.py receptor_gasteiger_hydrogen.pdbqt \
-		$worst \
+	$bin_dir/get_image.py $worst \
+		ligand_gasteiger.pdbqt \
 		$images_dir/$system/worst.png  0
 	$bin_dir/get_image.py receptor_gasteiger_hydrogen.pdbqt \
 		ligand_gasteiger.pdbqt \
