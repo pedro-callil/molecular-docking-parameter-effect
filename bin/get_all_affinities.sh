@@ -1,5 +1,7 @@
 #! /bin/bash
 
+# This script reads all logs written by Vina and extracts the affinity values.
+
 testing_root_dir="$(git rev-parse --show-toplevel)/files_for_charge_comparison/"
 testing_dirs=$(ls $testing_root_dir)
 
