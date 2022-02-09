@@ -7,7 +7,7 @@
 # of computationally intensive jobs, which would either
 # freeze the system or trigger the OOM-killer.
 function if_enough_threads_available () {
-	while [ $(jobs -p | wc -w) -ge 5 ] || \
+	while [ $(jobs -p | wc -w) -ge 3 ] || \
 		[ $(cat /proc/meminfo | \
 			grep MemFree | \
 			cut -d ':' -f 2 | \
@@ -26,7 +26,8 @@ do
 	echo "Now adding charges to system $system"
 	for charge in {none,qeq,qtpie,eem,eem2015ha,mmff94,gasteiger};
 	do
-		(if_enough_threads_available
-		obabel receptor_default.pdb -h --partialcharge $charge -xrh -O  receptor_${charge}_default.pdbqt) &
+		if_enough_threads_available
+		obabel receptor_default.pdb -h --partialcharge $charge -xrh \
+			-O  receptor_${charge}_default.pdbqt &
 	done
 done
