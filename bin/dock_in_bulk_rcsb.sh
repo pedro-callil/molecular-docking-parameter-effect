@@ -22,7 +22,7 @@ for system_dir in $charge_dir/*; do
 	cd $system_dir
 	echo $system_dir
 
-	for charge in {none,qeq,eem,,gasteiger};
+	for charge in {none,qeq,eem,gasteiger};
 	do
 		$bin_dir/vina_wrapper.sh receptor_${charge}_default ligand_${charge}
 		split_out out_receptor_${charge}_default_ligand_${charge}.pdbqt
@@ -30,6 +30,11 @@ for system_dir in $charge_dir/*; do
 		then
 			$bin_dir/vina_wrapper.sh receptor_${charge}_disulfide ligand_${charge}
 			split_out out_receptor_${charge}_disulfide_ligand_${charge}.pdbqt
+		fi
+		if [ -f "receptor_gasteiger_nocorrection.pdbqt" ];
+		then
+			$bin_dir/vina_wrapper.sh receptor_${charge}_nocorrection ligand_${charge}
+			split_out out_receptor_${charge}_nocorrection_ligand_${charge}.pdbqt
 		fi
 	done
 done

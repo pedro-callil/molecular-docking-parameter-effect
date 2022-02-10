@@ -8,7 +8,7 @@
 # of computationally intensive jobs, which would either
 # freeze the system or trigger the OOM-killer.
 function if_enough_threads_available () {
-	while [ $(jobs -p | wc -w) -ge 3 ] || \
+	while [ $(jobs -p | wc -w) -ge 2 ] || \
 		[ $(cat /proc/meminfo | \
 			grep MemFree | \
 			cut -d ':' -f 2 | \
