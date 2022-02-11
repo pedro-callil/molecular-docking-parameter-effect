@@ -6,59 +6,59 @@ os 15 que apresentaram receptores com menor número de aminoácidos. São esses:
 
 1. Protease do HIV-1 em complexo com inibidor tripeptídico,
    código 1A30 no _Protein Data Bank_. Campo de forças citado na
-   literatura: CHARMM27 [[1]](#1).
+   literatura: CHARMM36; modelo para a água: TIP3P [[1]](#1).
 
 2. Domínio SH2 da Grb2 em complexo com fosfopeptídeo,
-   código 1JYQ. Campo de forças citado na literatura: CHARMM27 [[2]](#2).
+   código 1JYQ. Campo de forças citado na literatura: CHARMM27;
+   modelo para a água: TIP3P [[2]](#2).
 
 3. Ribonuclease bovina pancreática A em complexo com 3'-fosfotimidina
    (3'-5')-pirofosfato adenosina 3'-fosfato, código 1U1B. Campo de forças:
-   CHARMM27 [[3]](#3).
+   CHARMM27; modelo para a água: TIP3P [[3]](#3).
 
 4. Variante K9A da proteína L30e de _Thermococcus celer_, código 1W40. Campo
-   de forças: AMBER99SB [[4](#4),[5](#5),[6]](#6).
+   de forças: AMBER99SB; modelo para a água: TIP3P [[4](#4),[5](#5),[6](#6)].
 
 5. Hsp90-α humana em complexo com dihidroxifenilpirazole, código  1YC1. Campo
-   de forças: GROMOS96 53A6 [[7]](#7).
+   de forças: GROMOS96 53A6; modelo para a água: SPC [[7]](#7).
 
 6. Hsp90 em complexo com análogo de radicicol, código 2IWX. Campo
-   de forças: GROMOS96 53A6 [[7]](#7).
+   de forças: GROMOS96 53A6; modelo para a água: SPC [[7]](#7).
 
 7. Hsp90 de levedura em complexo com o inibidor 7-O-carbamoilpremacbecina,
-   código 2VW5. Campo de forças: GROMOS96 53A6 [[7]](#7).
+   código 2VW5. Campo de forças: GROMOS96 53A6; modelo para a água: SPC [[7]](#7).
 
 8. Mutante E88G-N92L de Hsp90 em complexo com geldanamicina,
-   código 2YGE. Campo de forças: GROMOS96 53A6 [[7]](#7).
+   código 2YGE. Campo de forças: GROMOS96 53A6; modelo para a água: SPC [[7]](#7).
 
 9. Série tricíclica de inibidores de Hsp90.
-   código 2YKI. Campo de forças: GROMOS96 53A6 [[7]](#7).
+   código 2YKI. Campo de forças: GROMOS96 53A6; modelo para a água: SPC [[7]](#7).
 
 10. Mutante I50V de protease de HIV-1 em complexo com inibidor saquavira.
-   código 3CYX. Campo de forças: CHARMM36 [[8]](#8)
+   código 3CYX. Campo de forças: CHARMM36; modelo para a água: TIP3P [[1]](#1)
 
 11. Ribonuclease A em complexo com uridina 5'-fosfato, código 3DXG.
-   Campo de forças: CHARMM27 [[3]](#3).
+   Campo de forças: CHARMM27; modelo para a água: TIP3P [[3]](#3).
 
 12. β-lactoglobulina bovina em complexo com ácido cáprico, código 3NQ3.
-   Campo de forças: AMBER99SB [[9](#9),[5](#5),[6]](#6).
+   Campo de forças: AMBER99SB; modelo para a água: TIP3P [[8](#8),[5](#5),[6](#6)].
 
 13. Domínio SH2 da Grb2 em complexo com tripeptídeo, código 3OV1. Campo de
-   forças citado na literatura: CHARMM27 [[2]](#2).
+   forças citado na literatura: CHARMM27; modelo para a água: TIP3P [[2]](#2).
 
 14. Domínio SH2 da Grb2 em complexo com tripeptídeo, código 3S8O. Campo de
-   forças citado na literatura: CHARMM27 [[2]](#2).
+   forças citado na literatura: CHARMM27; modelo para a água: TIP3P [[2]](#2).
 
 15. Protease do HIV-1 em complexo com MKP97, código 4DJR. Campo de forças:
-   CHARMM36 [[8]](#8)
+   CHARMM36; modelo para a água: TIP3P [[1]](#1).
 
 Referências
 -----------
 
 <a id="1">[1]</a>
-Zoete, V., Michielin, O., & Karplus, M. (2002). Relation between sequence
-and structure of HIV-1 protease inhibitor complexes: a model system for
-the analysis of protein flexibility. _Journal of molecular biology_, 315(1),
-21-52.
+Perilla, J. R., & Schulten, K. (2017). Physical properties of the
+HIV-1 capsid from all-atom molecular dynamics simulations.
+_Nature communications_, 8(1), 1-10.
 
 <a id="2">[2]</a>
 Sanches, K., Dias, R. V. R., da Silva, P. H., Fossey, M. A., Caruso, Í. P.,
@@ -94,11 +94,6 @@ allosteric activation of Hsp90 by designed ligands. _Scientific reports_,
 6(1), 1-13.
 
 <a id="8">[8]</a>
-Perilla, J. R., & Schulten, K. (2017). Physical properties of the
-HIV-1 capsid from all-atom molecular dynamics simulations.
-_Nature communications_, 8(1), 1-10.
-
-<a id="9">[9]</a>
 Zhan, F., Ding, S., Xie, W., Zhu, X., Hu, J., Gao, J., ... & Chen, Y. (2020).
 Towards understanding the interaction of β-lactoglobulin with capsaicin:
 Multi-spectroscopic, thermodynamic, molecular docking and molecular dynamics
