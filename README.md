@@ -9,7 +9,7 @@ _AutoDock Vina_[[3]](#3), utilizando o programa _OpenBabel_[[4]](#4),
 e também para automatizar as simulações de _docking_ em grande
 quantidade de sistemas receptor-ligante.
 
-Planeja-se a adição futura de programas paa automatizar a execução de simulações
+Planeja-se a adição futura de programas para automatizar a execução de simulações
 de dinâmica molecular com o uso do GROMACS [[5]](#5).
 
 Autoria (_Scripts_)
@@ -27,7 +27,7 @@ of chemical information and modeling, ACS Publications, v. 59, n. 2, p. 895–91
 
 <a id="2">[2]</a>
 S. Jo, T. Kim, V.G. Iyer, and W. Im (2008). CHARMM-GUI: A Web-based Graphical User
-Interface for CHARMM. J. Comput. Chem. 29:1859-1865 
+Interface for CHARMM. J. Comput. Chem. 29:1859-1865
 
 <a id="3">[3]</a>
 TROTT, O.; OLSON, A. J. Autodock vina: improving the speed and accuracy of docking

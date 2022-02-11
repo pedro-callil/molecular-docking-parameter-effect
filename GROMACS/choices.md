@@ -16,12 +16,40 @@ os 15 que apresentaram receptores com menor número de aminoácidos. São esses:
    CHARMM27 [[3]](#3).
 
 4. Variante K9A da proteína L30e de _Thermococcus celer_, código 1W40. Campo
-   de forças: AMBER99SB [[4]](#4), [[5]](#5), [[6]](#6).
+   de forças: AMBER99SB [[4](#4),[5](#5),[6]](#6).
 
 5. Hsp90-α humana em complexo com dihidroxifenilpirazole, código  1YC1. Campo
    de forças: GROMOS96 53A6 [[7]](#7).
 
+6. Hsp90 em complexo com análogo de radicicol, código 2IWX. Campo
+   de forças: GROMOS96 53A6 [[7]](#7).
 
+7. Hsp90 de levedura em complexo com o inibidor 7-O-carbamoilpremacbecina,
+   código 2VW5. Campo de forças: GROMOS96 53A6 [[7]](#7).
+
+8. Mutante E88G-N92L de Hsp90 em complexo com geldanamicina,
+   código 2YGE. Campo de forças: GROMOS96 53A6 [[7]](#7).
+
+9. Série tricíclica de inibidores de Hsp90.
+   código 2YKI. Campo de forças: GROMOS96 53A6 [[7]](#7).
+
+10. Mutante I50V de protease de HIV-1 em complexo com inibidor saquavira.
+   código 3CYX. Campo de forças: CHARMM36 [[8]](#8)
+
+11. Ribonuclease A em complexo com uridina 5'-fosfato, código 3DXG.
+   Campo de forças: CHARMM27 [[3]](#3).
+
+12. β-lactoglobulina bovina em complexo com ácido cáprico, código 3NQ3.
+   Campo de forças: AMBER99SB [[9](#9),[5](#5),[6]](#6).
+
+13. Domínio SH2 da Grb2 em complexo com tripeptídeo, código 3OV1. Campo de
+   forças citado na literatura: CHARMM27 [[2]](#2).
+
+14. Domínio SH2 da Grb2 em complexo com tripeptídeo, código 3S8O. Campo de
+   forças citado na literatura: CHARMM27 [[2]](#2).
+
+15. Protease do HIV-1 em complexo com MKP97, código 4DJR. Campo de forças:
+   CHARMM36 [[8]](#8)
 
 Referências
 -----------
@@ -64,4 +92,16 @@ Vettoretti, G., Moroni, E., Sattin, S., Tao, J., Agard, D. A., Bernardi, A., &
 Colombo, G. (2016). Molecular dynamics simulations reveal the mechanisms of
 allosteric activation of Hsp90 by designed ligands. _Scientific reports_,
 6(1), 1-13.
+
+<a id="8">[8]</a>
+Perilla, J. R., & Schulten, K. (2017). Physical properties of the
+HIV-1 capsid from all-atom molecular dynamics simulations.
+_Nature communications_, 8(1), 1-10.
+
+<a id="9">[9]</a>
+Zhan, F., Ding, S., Xie, W., Zhu, X., Hu, J., Gao, J., ... & Chen, Y. (2020).
+Towards understanding the interaction of β-lactoglobulin with capsaicin:
+Multi-spectroscopic, thermodynamic, molecular docking and molecular dynamics
+simulation approaches. _Food Hydrocolloids_, 105, 105767.
+
 
