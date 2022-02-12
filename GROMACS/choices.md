@@ -16,23 +16,23 @@ os 15 que apresentaram receptores com menor número de aminoácidos. São esses:
    (3'-5')-pirofosfato adenosina 3'-fosfato, código 1U1B. Campo de forças:
    CHARMM27; modelo para a água: TIP3P [[3]](#3).
 
-4. Variante K9A da proteína L30e de _Thermococcus celer_, código 1W40. Campo
-   de forças: AMBER99SB; modelo para a água: TIP3P [[4](#4),[5](#5),[6](#6)].
+4. Ribonuclease A em complexo com 3'-nucleotídeos não-naturais, código 1W4O. Campo
+   de forças: CHARMM27; modelo para a água: TIP3P [[3]](#3).
 
 5. Hsp90-α humana em complexo com dihidroxifenilpirazole, código  1YC1. Campo
-   de forças: GROMOS96 53A6; modelo para a água: SPC [[7]](#7).
+   de forças: GROMOS96 53A6; modelo para a água: SPC [[6]](#6).
 
 6. Hsp90 em complexo com análogo de radicicol, código 2IWX. Campo
-   de forças: GROMOS96 53A6; modelo para a água: SPC [[7]](#7).
+   de forças: GROMOS96 53A6; modelo para a água: SPC [[6]](#6).
 
 7. Hsp90 de levedura em complexo com o inibidor 7-O-carbamoilpremacbecina,
-   código 2VW5. Campo de forças: GROMOS96 53A6; modelo para a água: SPC [[7]](#7).
+   código 2VW5. Campo de forças: GROMOS96 53A6; modelo para a água: SPC [[6]](#6).
 
 8. Mutante E88G-N92L de Hsp90 em complexo com geldanamicina,
-   código 2YGE. Campo de forças: GROMOS96 53A6; modelo para a água: SPC [[7]](#7).
+   código 2YGE. Campo de forças: GROMOS96 53A6; modelo para a água: SPC [[6]](#6).
 
 9. Série tricíclica de inibidores de Hsp90.
-   código 2YKI. Campo de forças: GROMOS96 53A6; modelo para a água: SPC [[7]](#7).
+   código 2YKI. Campo de forças: GROMOS96 53A6; modelo para a água: SPC [[6]](#6).
 
 10. Mutante I50V de protease de HIV-1 em complexo com inibidor saquavira.
    código 3CYX. Campo de forças: CHARMM36; modelo para a água: TIP3P [[1]](#1)
@@ -41,7 +41,7 @@ os 15 que apresentaram receptores com menor número de aminoácidos. São esses:
    Campo de forças: CHARMM27; modelo para a água: TIP3P [[3]](#3).
 
 12. β-lactoglobulina bovina em complexo com ácido cáprico, código 3NQ3.
-   Campo de forças: AMBER99SB; modelo para a água: TIP3P [[8](#8),[5](#5),[6](#6)].
+   Campo de forças: AMBER99SB; modelo para a água: TIP3P [[7](#7),[4](#4),[5](#5)].
 
 13. Domínio SH2 da Grb2 em complexo com tripeptídeo, código 3OV1. Campo de
    forças citado na literatura: CHARMM27; modelo para a água: TIP3P [[2]](#2).
@@ -72,28 +72,22 @@ Dynamics Simulation of Bovine Pancreatic Ribonuclease A− CpA and Transition
 State-like Complexes. _The Journal of Physical Chemistry B_, 114(21), 7371-7382.
 
 <a id="4">[4]</a>
-Khan, S., Farooq, U., & Kurnikova, M. (2016). Exploring protein stability by
-comparative molecular dynamics simulations of homologous hyperthermophilic,
-mesophilic, and psychrophilic proteins. _Journal of Chemical Information and
-Modeling_, 56(11), 2129-2139.
-
-<a id="5">[5]</a>
 J. A. Maier; C. Martinez; K. Kasavajhala; L. Wickstrom; K. E. Hauser; C.
 Simmerling. ff14SB: Improving the Accuracy of Protein Side Chain and Backbone
 Parameters from ff99SB. _J. Chem. Theory Comput._, 2015, 11, 3696–3713.
 
-<a id="6">[6]</a>
+<a id="5">[5]</a>
 V. Hornak; R. Abel; A. Okur; B. Strockbine; A. Roitberg; C. Simmerling.
 Comparison of multiple Amber force fields and development of improved
 protein backbone parameters. _Proteins_, 2006, 65, 712–725.
 
-<a id="7">[7]</a>
+<a id="6">[6]</a>
 Vettoretti, G., Moroni, E., Sattin, S., Tao, J., Agard, D. A., Bernardi, A., &
 Colombo, G. (2016). Molecular dynamics simulations reveal the mechanisms of
 allosteric activation of Hsp90 by designed ligands. _Scientific reports_,
 6(1), 1-13.
 
-<a id="8">[8]</a>
+<a id="7">[7]</a>
 Zhan, F., Ding, S., Xie, W., Zhu, X., Hu, J., Gao, J., ... & Chen, Y. (2020).
 Towards understanding the interaction of β-lactoglobulin with capsaicin:
 Multi-spectroscopic, thermodynamic, molecular docking and molecular dynamics
