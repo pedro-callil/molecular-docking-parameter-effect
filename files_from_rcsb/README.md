@@ -1,5 +1,5 @@
-Termos "correção de resíduos faltantes" e "adição de pontes de dissulfeto"
-==========================================================================
+Arquivos extraídos de "CHARMM-GUI"
+==================================
 
 Nesse diretório estão arquivos retirados do _Protein Data Bank_. Além disso,
 alguns diretórios apresentam os arquivos `disulfide_bonds.pdb` e
