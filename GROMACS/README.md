@@ -52,6 +52,15 @@ os 15 que apresentaram receptores com menor número de aminoácidos. São esses:
 15. Protease do HIV-1 em complexo com MKP97, código 4DJR. Campo de forças:
    CHARMM36; modelo para a água: TIP3P [[1]](#1).
 
+Essas proteínas foram simuladas em GROMACS 2021.4, de acordo com os
+comandos listados nos _scripts_ `<complexo>_gromacs.sh`, presentes
+em cada subdiretório desse diretório.
+
+Foram utilizados como base arquivos `.mdp` escitos por J. Lemkul [[8]](#8),
+com algumas modificações, por exemplo para uso do campo de forças CHARMM36,
+como descrito na documentação do programa [[9]](#9).
+
+
 Referências
 -----------
 
@@ -93,4 +102,13 @@ Towards understanding the interaction of β-lactoglobulin with capsaicin:
 Multi-spectroscopic, thermodynamic, molecular docking and molecular dynamics
 simulation approaches. _Food Hydrocolloids_, 105, 105767.
 
+<a id="8">[8]</a>
+J.A. Lemkul (2018). From Proteins to Perturbed Hamiltonians: A Suite of
+Tutorials for the GROMACS-2018 Molecular Simulation Package, v1.0. _Living
+J. Comp. Mol. Sci._ 1 (1): 5068.
+
+<a id="9">[9]</a>
+Berendsen, H. J., van der Spoel, D., & van Drunen, R. (1995). GROMACS: A
+message-passing parallel molecular dynamics implementation. _Computer physics
+communications_, 91(1-3), 43-56.
 
