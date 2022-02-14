@@ -34,7 +34,7 @@ os 15 que apresentaram receptores com menor número de aminoácidos. São esses:
 9. Série tricíclica de inibidores de Hsp90.
    código 2YKI. Campo de forças: GROMOS96 53A6; modelo para a água: SPC [[6]](#6).
 
-10. Mutante I50V de protease de HIV-1 em complexo com inibidor saquavira.
+10. Mutante I50V de protease de HIV-1 em complexo com inibidor saquinavira.
    código 3CYX. Campo de forças: CHARMM36; modelo para a água: TIP3P [[1]](#1)
 
 11. Ribonuclease A em complexo com uridina 5'-fosfato, código 3DXG.

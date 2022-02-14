@@ -7,8 +7,9 @@
 gmx pdb2gmx -f 1A30_original.pdb \
 		-o 1A30_forcefield.gro \
 		-water tip3p \
-		-ff charmm36 \ # Get it from MacKerell lab website
+		-ff charmm36 \
 		-ignh
+# Get it from MacKerell lab website
 
 # creating a cubic periodic box, with our protein at its center, with at
 # least 2x1.0 = 2.0nm gap between protein images.
@@ -27,7 +28,7 @@ echo "SOL" | \
 # For some mysterious reason, the CHARMM36 force field uses ``CLA'' to
 # represent Cl- ions, instead of Cl. Therefore, one must sed some files to
 # be able to use it in the next steps (in this case, energy minimization).
-sed -i 's/\ CL/\ CLA/g' 1A30_ions.gro
+sed -i 's/\ CL/\CLA/g' 1A30_ions.gro
 sed -i 's/CL/CLA/g' topol.top
 
 # And we start the energy minimization.

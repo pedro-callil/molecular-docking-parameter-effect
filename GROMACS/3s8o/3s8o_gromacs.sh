@@ -4,28 +4,28 @@
 # of Grb2 SH2 domain using GROMACS.
 
 # converting .pdb to .gro format, applying force fields, etc.
-gmx pdb2gmx -f 1JYQ_original.pdb \
-		-o 1JYQ_forcefield.gro \
+gmx pdb2gmx -f 3S8O_original.pdb \
+		-o 3S8O_forcefield.gro \
 		-water tip3p \
 		-ff charmm27 \
 		-ignh
 
 # creating a cubic periodic box, with our protein at its center, with at
 # least 2x1.0 = 2.0nm gap between protein images.
-gmx editconf -f 1JYQ_forcefield.gro -o 1JYQ_box.gro -c -d 1.0 -bt cubic
+gmx editconf -f 3S8O_forcefield.gro -o 3S8O_box.gro -c -d 1.0 -bt cubic
 
 # Solvating box created previously.
-gmx solvate -cp 1JYQ_box.gro -cs spc216.gro -o 1JYQ_solvated.gro -p topol.top
+gmx solvate -cp 3S8O_box.gro -cs spc216.gro -o 3S8O_solvated.gro -p topol.top
 
 # Including ions to obtain a neutral charge
-gmx grompp -f ions.mdp -c 1JYQ_solvated.gro -p topol.top -o ions.tpr
+gmx grompp -f ions.mdp -c 3S8O_solvated.gro -p topol.top -o ions.tpr
 # Substitute only solvent molecules.
 echo "SOL" | \
-	gmx genion -s ions.tpr -o 1JYQ_ions.gro \
+	gmx genion -s ions.tpr -o 3S8O_ions.gro \
 		-p topol.top -pname NA -nname CL -neutral
 
 # And we start the energy minimization.
-gmx grompp -f minim.mdp -c 1JYQ_ions.gro -p topol.top -o em.tpr
+gmx grompp -f minim.mdp -c 3S8O_ions.gro -p topol.top -o em.tpr
 gmx mdrun -v -deffnm em
 
 # And canonical equilibration.

@@ -1,31 +1,38 @@
 #! /bin/bash
 
 # This file shows the commands used to run a molecular dynamics simulation
-# of Grb2 SH2 domain using GROMACS.
+# of HIV-1 protease using GROMACS.
 
 # converting .pdb to .gro format, applying force fields, etc.
-gmx pdb2gmx -f 1JYQ_original.pdb \
-		-o 1JYQ_forcefield.gro \
+gmx pdb2gmx -f 4DJR_original.pdb \
+		-o 4DJR_forcefield.gro \
 		-water tip3p \
-		-ff charmm27 \
+		-ff charmm36 \
 		-ignh
+# Get it from MacKerell lab website
 
 # creating a cubic periodic box, with our protein at its center, with at
 # least 2x1.0 = 2.0nm gap between protein images.
-gmx editconf -f 1JYQ_forcefield.gro -o 1JYQ_box.gro -c -d 1.0 -bt cubic
+gmx editconf -f 4DJR_forcefield.gro -o 4DJR_box.gro -c -d 1.0 -bt cubic
 
 # Solvating box created previously.
-gmx solvate -cp 1JYQ_box.gro -cs spc216.gro -o 1JYQ_solvated.gro -p topol.top
+gmx solvate -cp 4DJR_box.gro -cs spc216.gro -o 4DJR_solvated.gro -p topol.top
 
 # Including ions to obtain a neutral charge
-gmx grompp -f ions.mdp -c 1JYQ_solvated.gro -p topol.top -o ions.tpr
+gmx grompp -f ions.mdp -c 4DJR_solvated.gro -p topol.top -o ions.tpr
 # Substitute only solvent molecules.
 echo "SOL" | \
-	gmx genion -s ions.tpr -o 1JYQ_ions.gro \
+	gmx genion -s ions.tpr -o 4DJR_ions.gro \
 		-p topol.top -pname NA -nname CL -neutral
 
+# For some mysterious reason, the CHARMM36 force field uses ``CLA'' to
+# represent Cl- ions, instead of Cl. Therefore, one must sed some files to
+# be able to use it in the next steps (in this case, energy minimization).
+sed -i 's/\ CL/\CLA/g' 4DJR_ions.gro
+sed -i 's/CL/CLA/g' topol.top
+
 # And we start the energy minimization.
-gmx grompp -f minim.mdp -c 1JYQ_ions.gro -p topol.top -o em.tpr
+gmx grompp -f minim.mdp -c 4DJR_ions.gro -p topol.top -o em.tpr
 gmx mdrun -v -deffnm em
 
 # And canonical equilibration.
