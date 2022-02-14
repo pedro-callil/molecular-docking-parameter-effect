@@ -83,9 +83,9 @@ de cada subdiretório do diretório `./GROMACS/` o _script_ em Bash nele contido
 Por exemplo:
 
 ```
-cd GROMACS
-cd 1a30
-./1a30_gromacs.sh
+$ cd GROMACS
+$ cd 1a30
+$ ./1a30_gromacs.sh
 ```
 
 Importante ressaltar que os sistemas de código RCSB 1A30, 3CYX e 4DJR exigem a
