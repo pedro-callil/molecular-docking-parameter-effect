@@ -19,7 +19,8 @@ gmx solvate -cp 1A30_box.gro -cs spc216.gro -o 1A30_solvated.gro -p topol.top
 
 # Including ions to obtain a neutral charge
 gmx grompp -f ions.mdp -c 1A30_solvated.gro -p topol.top -o ions.tpr
-echo "SOL" | \ # Substitute only solvent molecules.
+# Substitute only solvent molecules.
+echo "SOL" | \
 	gmx genion -s ions.tpr -o 1A30_ions.gro \
 		-p topol.top -pname NA -nname CL -neutral
 

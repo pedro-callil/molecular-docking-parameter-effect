@@ -19,7 +19,8 @@ gmx solvate -cp 1U1B_box.gro -cs spc216.gro -o 1U1B_solvated.gro -p topol.top
 
 # Including ions to obtain a neutral charge
 gmx grompp -f ions.mdp -c 1U1B_solvated.gro -p topol.top -o ions.tpr
-echo "SOL" | \ # Substitute only solvent molecules.
+# Substitute only solvent molecules.
+echo "SOL" | \
 	gmx genion -s ions.tpr -o 1U1B_ions.gro \
 		-p topol.top -pname NA -nname CL -neutral
 
