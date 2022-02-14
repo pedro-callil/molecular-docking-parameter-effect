@@ -60,6 +60,12 @@ Foram utilizados como base arquivos `.mdp` escitos por J. Lemkul [[8]](#8),
 com algumas modificações, por exemplo para uso do campo de forças CHARMM36,
 como descrito na documentação do programa [[9]](#9).
 
+Por fim, existe um campo de forças (`gromos53a6_hsd.ff`) nesse diretório.
+Foi criado a partir do campo de forças GROMOS96 53A6, distribuído com o
+próprio GROMACS, com uma pequena modificação: ao invés de histidina neutra
+protonada em D1 ser simbolizada pela abreviação "HISA", o é por "HSD", para
+garantir compatibilidade com arquivos provenientes de CHARMM-GUI [[10]](#10).
+
 
 Referências
 -----------
@@ -111,4 +117,10 @@ J. Comp. Mol. Sci._ 1 (1): 5068.
 Berendsen, H. J., van der Spoel, D., & van Drunen, R. (1995). GROMACS: A
 message-passing parallel molecular dynamics implementation. _Computer physics
 communications_, 91(1-3), 43-56.
+
+<a id="10">[10]</a>
+Oostenbrink, C., Villa, A., Mark, A. E., & Van Gunsteren, W. F. (2004).
+A biomolecular force field based on the free enthalpy of hydration and
+solvation: the GROMOS force‐field parameter sets 53A5 and 53A6. _Journal
+of computational chemistry_, 25(13), 1656-1676.
 
