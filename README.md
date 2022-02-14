@@ -2,15 +2,95 @@ Programas e arquivos utilizados no projeto "Análise dos Efeitos dos Parâmetros
 ===================================================================================================================
 
 Nesse repositório temos os arquivos (`.pdb`, `.sdf`, `.top`, entre outros)
-[[1]](#1), [[2]](#2) que armazenam as moléculas (receptores e ligantes) utilizados no projeto.
+[[1]](#1), [[2]](#2) que armazenam as moléculas (receptores e ligantes) utilizados
+no projeto.
+
 Além disso, temos alguns _scripts_ para automatizar o processo de conversão
 dos arquivos fornecidos para um formato utilizável pelo programa
 _AutoDock Vina_[[3]](#3), utilizando o programa _OpenBabel_[[4]](#4),
 e também para automatizar as simulações de _docking_ em grande
 quantidade de sistemas receptor-ligante.
 
-Planeja-se a adição futura de programas para automatizar a execução de simulações
-de dinâmica molecular com o uso do GROMACS [[5]](#5).
+Por fim, temos _scripts_ para automatizar a execução de simulações
+de dinâmica molecular com o uso do GROMACS [[5]](#5); no momento, apenas
+para a simulação de proteínas em água. Planeja-se a simulação de alguns
+complexos proteína-ligante, no futuro.
+
+Execução & _Software_ Utilizado
+-------------------------------
+
+Para refazer os cálculos utilizados, é necessário
+[PyMOL](https://pymol.org/2/),
+[GROMACS](https://www.gromacs.org/),
+[OpenBabel](https://openbabel.org/wiki/Main_Page),
+[Autodock Vina](https://vina.scripps.edu/) e
+[GNU Datamash](https://www.gnu.org/software/datamash/).
+Além disso, os _scripts_
+exigem um ambiente GNU/Linux (com utilidades como `sed`, `awk`,
+`head`, _etc._, além do sistema de arquivos `/proc`), Python e
+Bash.
+
+Além disso, talvez sejam necessárias algumas modificações em alguns _scripts_
+para lidar com peculiaridades de cada máquina (memória disponível, número
+de CPUs, entre outros).
+
+Caso essa verificação seja desejada, basta clonar esse repositório e
+executar os _scripts_ relevantes.
+
+```
+$ git clone https://github.com/pedro-callil/molecular-docking-parameter-effect
+```
+
+Para avaliação dos efeitos de cargas e adição de hidrogênios:
+
+```
+$ ./bin/add_charges_and_hydrogen.sh
+$ ./bin/add_charges_ligand_no_hydrogens.sh
+
+$ ./bin/create_dir_for_charge_comparison.sh
+
+$ ./bin/dock_in_bulk.sh
+$ ./bin/dock_in_bulk_nohydrogen.sh
+
+$ ./bin/get_all_affinities.sh
+$ ./bin/get_all_RMSDs.sh
+```
+
+Resultados estarão disponíveis nos arquivos `*.results` (RMSDs) e `*.affinities`
+de cada subdiretório do diretório `./files_for_charge_comparison/`.
+
+Para avaliação dos efeitos da inserção de resíduos faltantes e pontes de
+dissulfeto através de CHARMM-GUI:
+
+```
+$ ./bin/add_charges_and_hydrogen_for_rcsb_default.sh
+$ ./bin/add_charges_and_hydrogen_for_rcsb_disulfide.sh
+$ ./bin/add_charges_and_hydrogen_for_rcsb_nocorrection.sh
+
+$ ./bin/create_dir_for_rcsb_files_charge_comparison.sh
+
+$ ./bin/dock_in_bulk_rcsb.sh
+
+$ ./bin/get_all_affinities_charmm.sh
+$ ./bin/get_all_RMSDs_charmm.sh
+```
+
+Resultados estarão disponíveis nos arquivos `*.results` (RMSDs) e `*.affinities`
+de cada subdiretório do diretório `./files_from_rcsb/files_for_charge_comparison/`.
+
+Para simulações de dinâmica molecular com o uso de GROMACS, basta executar dentro
+de cada subdiretório do diretório `./GROMACS/` o _script_ em Bash nele contido.
+Por exemplo:
+
+```
+cd GROMACS
+cd 1a30
+./1a30_gromacs.sh
+```
+
+Importante ressaltar que os sistemas de código RCSB 1A30, 3CYX e 4DJR exigem a
+instalação do campo de forças
+[Charmm 36](https://mackerell.umaryland.edu/charmm_ff.shtml#gromacs).
 
 Autoria (_Scripts_)
 -------------------
