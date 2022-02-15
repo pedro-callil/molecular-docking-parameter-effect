@@ -92,6 +92,16 @@ Importante ressaltar que os sistemas de código RCSB 1A30, 3CYX e 4DJR exigem a
 instalação do campo de forças
 [CHARMM36](https://mackerell.umaryland.edu/charmm_ff.shtml#gromacs).
 
+Caso se deseje executar todas as simulações utilizadas no projeto,
+basta invocar o _script_ `bin/all.sh`:
+
+```
+$ ./bin/all.sh
+```
+
+Isso, entretanto, não é recomendado; apesar de não ter sido testado, se
+estima em uma semana ou mais o tempo de máquina exigido.
+
 Autoria (_Scripts_)
 -------------------
 
