@@ -90,7 +90,7 @@ $ ./1a30_gromacs.sh
 
 Importante ressaltar que os sistemas de código RCSB 1A30, 3CYX e 4DJR exigem a
 instalação do campo de forças
-[Charmm 36](https://mackerell.umaryland.edu/charmm_ff.shtml#gromacs).
+[CHARMM36](https://mackerell.umaryland.edu/charmm_ff.shtml#gromacs).
 
 Autoria (_Scripts_)
 -------------------
