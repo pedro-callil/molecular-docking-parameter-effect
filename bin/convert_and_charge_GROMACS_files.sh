@@ -1,6 +1,7 @@
 #! /bin/bash
 
-# This file converts GROMACS output files to PDB files.
+# This file converts GROMACS output files to PDB files, those
+# to PDBQT files, and with those it executes docking simulations.
 
 # Function to fix chain identifiers in the PDB
 function split_in_list () {

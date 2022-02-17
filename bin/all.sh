@@ -35,3 +35,5 @@ do
 	./${dir}_gromacs.sh
 done
 
+$bin_dir/convert_and_charge_GROMACS_files.sh
+
