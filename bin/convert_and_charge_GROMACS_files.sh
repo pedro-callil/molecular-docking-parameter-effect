@@ -21,6 +21,16 @@ function split_in_list () {
 	fi
 }
 
+# Split vina output
+function split_out () {
+	awk 'BEGIN{
+		RS="ENDMDL"
+	}{
+		number++;
+		print $0 > filename"_"number".pdbqt"
+	}' filename=$1 $1
+}
+
 top=$(git rev-parse --show-toplevel)
 
 list_of_dirs=$(ls $top/GROMACS | \
@@ -65,5 +75,12 @@ do
 	split_in_list ${dir}_wrongseq.pdb $must_cut > ${dir}_unaligned.pdb
 	$top/bin/align_pdb.py ${dir}_unaligned.pdb $(echo $dir | \
 		tr '[a-z]' '[A-Z]')_original.pdb $dir.pdb
+	obabel $dir.pdb -h --partialcharge gasteiger \
+		-xrh -O ${dir}_receptor.pdbqt
+	cp $top/files_for_charge_comparison/$dir/grid.conf ./
+	cp $top/files_for_charge_comparison/$dir/ligand_gasteiger.pdbqt \
+		${dir}_ligand.pdbqt
+	$top/bin/vina_wrapper.sh ${dir}_receptor ${dir}_ligand
+	split_out out_${dir}_receptor_${dir}_ligand.pdbqt
 done
 
