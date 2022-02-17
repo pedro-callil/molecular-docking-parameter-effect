@@ -62,6 +62,8 @@ do
 		fi
 		residue_in_chain_old=$residue_in_chain
 	done && echo $line ) | cut -d ':' -f 1)
-	split_in_list ${dir}_wrongseq.pdb $must_cut > $dir.pdb
+	split_in_list ${dir}_wrongseq.pdb $must_cut > ${dir}_unaligned.pdb
+	$top/bin/align_pdb.py ${dir}_unaligned.pdb $(echo $dir | \
+		tr '[a-z]' '[A-Z]')_original.pdb $dir.pdb
 done
 
