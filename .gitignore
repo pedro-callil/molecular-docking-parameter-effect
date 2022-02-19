@@ -19,5 +19,5 @@ mdout*
 *.top.*
 *.itp
 GROMACS/*/*.ff
-GROMACS/gro_correction_and_charges/*
+GROMACS/gro_correction_and_charges*/*
 
