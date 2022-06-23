@@ -1,4 +1,5 @@
 files_for_docking/*
+box_size/*
 files_for_charge_comparison/*
 files_from_rcsb/files_for_charge_comparison/*
 images/*
