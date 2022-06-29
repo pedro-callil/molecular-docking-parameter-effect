@@ -1,7 +1,7 @@
 #! /usr/bin/bash
 
 # This script verifies the influence of "exhaustiveness" and box size in
-# docking simulations performed via Vina.
+# docking simulations performed via Vina. Here, all torsions are active.
 
 function split_out () {
 	awk 'BEGIN{
@@ -36,7 +36,7 @@ do
 		Y_center=$(grep Y <grid.conf | cut -d ':' -f 2)
 		Z_center=$(grep Z <grid.conf | cut -d ':' -f 2)
 		half_grid=$(grep gridSize <grid.conf | cut -d ':' -f 2)
-		for exh in {8..24}
+		for exh in {2,4,8,16,32}
 		do
 			for size in {1,2,4,8,16}
 			do
@@ -56,6 +56,7 @@ do
 				split_out out_"$size"_"$exh".pdbqt
 			done
 		done
+		cd $root_dir
 	fi
 done
 
