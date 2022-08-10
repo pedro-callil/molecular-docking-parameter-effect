@@ -1,47 +1,46 @@
-Programas e arquivos utilizados no projeto "Análise dos Efeitos dos Parâmetros de Simulação em _Docking_ Molecular"
-===================================================================================================================
+Programs and Files Utilized in the Article "Effects of Preprocessing and Simulation Parameters in the Performance of Molecular Docking Studies"
+===============================================================================================================================================
 
-Nesse repositório temos os arquivos (`.pdb`, `.sdf`, `.top`, entre outros)
-[[1]](#1), [[2]](#2) que armazenam as moléculas (receptores e ligantes) utilizados
-no projeto.
+In this repository are kept the files (`.pdb`, `.sdf`, among
+others) [[1]](#1), [[2]](#2) that store the molecules analyzed in this work.
 
-Além disso, temos alguns _scripts_ para automatizar o processo de conversão
-dos arquivos fornecidos para um formato utilizável pelo programa
-_AutoDock Vina_[[3]](#3), utilizando o programa _OpenBabel_[[4]](#4),
-e também para automatizar as simulações de _docking_ em grande
-quantidade de sistemas receptor-ligante.
+Besides, we have some scripts to automate the conversion of the files supplied
+to a file format convenient for use with _AutoDock-GPU_ [[3]](#3) and _AutoDock
+Vina_ [[4]](#4), through the software package _OpenBabel_ [[5]](#5), and also
+toautomate the docking simulations of a large number of receptor-ligand
+complexes.
 
-Por fim, temos _scripts_ para automatizar a execução de simulações
-de dinâmica molecular com o uso do GROMACS [[5]](#5); no momento, apenas
-para a simulação de proteínas em água. Planeja-se a simulação de alguns
-complexos proteína-ligante, no futuro.
+Finally, we have files associated with the Molecular Dynamics simulations:
+`.top` and `.prm` files, in the specific situations that demanded the use of a
+web server, `.mdp` files with the simulation parameters and _scripts_ to
+automate the molecular dynamics simulations, using _GROMACS_ [[6]](#6).
 
-Execução & _Software_ Utilizado
--------------------------------
+Dependencies and Executions Instructions
+----------------------------------------
 
-Para refazer os cálculos utilizados, é necessário
+To execute the scripts, one will need
 [PyMOL](https://pymol.org/2/),
 [GROMACS](https://www.gromacs.org/),
 [OpenBabel](https://openbabel.org/wiki/Main_Page),
-[Autodock Vina](https://vina.scripps.edu/) e
+[Autodock Vina](https://vina.scripps.edu/),
+[Autodock GPU](https://github.com/ccsb-scripps/AutoDock-GPU) and
 [GNU Datamash](https://www.gnu.org/software/datamash/).
-Além disso, os _scripts_
-exigem um ambiente GNU/Linux (com utilidades como `sed`, `awk`,
-`head`, _etc._, além do sistema de arquivos `/proc`), Python e
-Bash.
+Besides, the _scripts_ demand an Unix (or Unix-like) environment, since they
+employ standard utilities as `sed(1)`, `awk(1p)`, `tail(1)`, and the proc
+filesystem. Finally, since the scripts are written in Bash or Python, both
+languages are also necessary.
 
-Além disso, talvez sejam necessárias algumas modificações em alguns _scripts_
-para lidar com peculiaridades de cada máquina (memória disponível, número
-de CPUs, entre outros).
+One might need to modify the scripts to account for the peculiarities of each
+system (as available memory, number of threads, _etc._).
 
-Caso essa verificação seja desejada, basta clonar esse repositório e
-executar os _scripts_ relevantes.
+To obtain all data and code necessary, one must initially clone this repository:
 
 ```
 $ git clone https://github.com/pedro-callil/molecular-docking-parameter-effect
+$ cd molecular-docking-parameter-effect
 ```
 
-Para avaliação dos efeitos de cargas e adição de hidrogênios:
+To evaluate the effects of the addition of charges and hydrogen atoms:
 
 ```
 $ ./bin/add_charges_and_hydrogen.sh
@@ -56,11 +55,11 @@ $ ./bin/get_all_affinities.sh
 $ ./bin/get_all_RMSDs.sh
 ```
 
-Resultados estarão disponíveis nos arquivos `*.results` (RMSDs) e `*.affinities`
-de cada subdiretório do diretório `./files_for_charge_comparison/`.
+The results will be available in the files `*.results` (RMSDs) and `*.affinities`
+of each subdirectory of the directory `./files_for_charge_comparison/`.
 
-Para avaliação dos efeitos da inserção de resíduos faltantes e pontes de
-dissulfeto através de CHARMM-GUI:
+One might be interested in checking the effects of the addition of missing
+residues and disulfide bonds through the CHARMM-GUI web server:
 
 ```
 $ ./bin/add_charges_and_hydrogen_for_rcsb_default.sh
@@ -75,12 +74,12 @@ $ ./bin/get_all_affinities_charmm.sh
 $ ./bin/get_all_RMSDs_charmm.sh
 ```
 
-Resultados estarão disponíveis nos arquivos `*.results` (RMSDs) e `*.affinities`
-de cada subdiretório do diretório `./files_from_rcsb/files_for_charge_comparison/`.
+The results will be available in the files `*.results` (RMSDs) and `*.affinities`
+of each subdirectory of the directory `./files_from_rcsb/files_for_charge_comparison/`.
 
-Para simulações de dinâmica molecular com o uso de GROMACS, basta executar dentro
-de cada subdiretório do diretório `./GROMACS/` o _script_ em Bash nele contido.
-Por exemplo:
+For isolated receptor molecular dynamics simulations, one shall execute inside
+each subdirectory, identified with a PDB code, of the directory `./GROMACS/`, the
+executable Bash script kept inside:
 
 ```
 $ cd GROMACS
@@ -88,26 +87,23 @@ $ cd 1a30
 $ ./1a30_gromacs.sh
 ```
 
-Importante ressaltar que os sistemas de código RCSB 1A30, 3CYX e 4DJR exigem a
-instalação do campo de forças
-[CHARMM36](https://mackerell.umaryland.edu/charmm_ff.shtml#gromacs).
+It is important to observe that the force field
+[CHARMM36](https://mackerell.umaryland.edu/charmm_ff.shtml#gromacs) is not
+available in this repository, and must be obtained from the linked website.
+Not all molecules demand this force field, however. More information (such as
+regarding the simulation with receptor and ligand) can be found inside the
+directories `./GROMACS/` and `./GROMACS_LIGAND/`.
 
-Caso se deseje executar todas as simulações utilizadas no projeto,
-basta invocar o _script_ `bin/all.sh`:
+Autorship
+---------------------
 
-```
-$ ./bin/all.sh
-```
+Pedro Henrique Callil Soares <pedrocallil@usp.br>
 
-Isso, entretanto, não é recomendado; apesar de não ter sido testado, se
-estima em uma semana ou mais o tempo de máquina exigido.
+Lilian Caroline Kramer Biasi <lckbiasi@usp.br>
 
-Autoria (_Scripts_)
--------------------
+Pedro de Alcântara Pessoa Filho <pedropessoa@usp.br>
 
-Pedro Callil <pedrocallil@usp.br>
-
-Referências
+References
 -----------
 
 <a id="1">[1]</a>
@@ -125,10 +121,14 @@ with a new scoring function, efficient optimization, and multithreading. Journal
 computational chemistry, Wiley Online Library, v. 31, n. 2, p. 455–461, 2010.
 
 <a id="4">[4]</a>
+SANTOS-MARTINS, D. et al.  Accelerating AutoDock4 with GPUs and gradient-based local
+search. Journal of chemical theory and computation 17(2), 1060–1073 (2021)
+
+<a id="5">[5]</a>
 O’BOYLE, N. M. et al. Open babel: An open chemical toolbox. Journal of cheminformatics,
 BioMed Central, v. 3, n. 1, p. 1–14, 2011.
 
-<a id="5">[5]</a>
+<a id="6">[6]</a>
 BERENDSEN, H. J.; SPOEL, D. van der; DRUNEN, R. van. Gromacs: a message-passing
 parallel molecular dynamics implementation. Computer physics communications, Elsevier,
 v. 91, n. 1-3, p. 43–56, 1995.

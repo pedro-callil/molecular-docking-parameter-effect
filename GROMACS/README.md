@@ -1,74 +1,75 @@
-Proteínas escolhidas para simulações de Dinâmica Molecular
-==========================================================
+Receptors chosen for Molecular Dynamics simulations
+===================================================
 
-Foram escolhidas, dentre os 90 complexos receptor-ligante analisados
-os 15 que apresentaram receptores com menor número de aminoácidos. São esses:
+Among the 90 receptor-ligand complexes analyzed, fifteen have been chosen,
+giving preference to the ones with smallest number of atoms in the receptor.
+They are:
 
-1. Protease do HIV-1 em complexo com inibidor tripeptídico,
-   código 1A30 no _Protein Data Bank_. Campo de forças citado na
-   literatura: CHARMM36; modelo para a água: TIP3P [[1]](#1).
+1. HIV-1 Protease complexed with a tripeptide inhibitor,
+   code 1A30 in the _Protein Data Bank_. Force field cited in previous work:
+   CHARMM36; water model: TIP3P [[1]](#1).
 
-2. Domínio SH2 da Grb2 em complexo com fosfopeptídeo,
-   código 1JYQ. Campo de forças citado na literatura: CHARMM27;
-   modelo para a água: TIP3P [[2]](#2).
+2. Grb2 SH2 domain complexed with phospho peptide,
+   code 1JYQ. Force field cited in previous work: CHARMM27;
+   water model: TIP3P [[2]](#2).
 
-3. Ribonuclease bovina pancreática A em complexo com 3'-fosfotimidina
-   (3'-5')-pirofosfato adenosina 3'-fosfato, código 1U1B. Campo de forças:
-   CHARMM27; modelo para a água: TIP3P [[3]](#3).
+3. Bovine Pancreatic Ribonuclease A in complex with 3'-phosphotimidine
+   (3'-5')-pirophosphate adenosine 3'-phosphato, code 1U1B. Force field:
+   CHARMM27; water model: TIP3P [[3]](#3).
 
-4. Ribonuclease A em complexo com 3'-nucleotídeos não-naturais, código 1W4O. Campo
-   de forças: CHARMM27; modelo para a água: TIP3P [[3]](#3).
+4. Ribonuclease A in complex with nonnatural 3'-nucleotides, code 1W4O. Force
+   field: CHARMM27; water model: TIP3P [[3]](#3).
 
-5. Hsp90-α humana em complexo com dihidroxifenilpirazole, código  1YC1. Campo
-   de forças: GROMOS96 53A6; modelo para a água: SPC [[6]](#6).
+5. Human Hsp90-α complexed with dihydroxyphenylpyrazoles, code  1YC1. Force
+   field: GROMOS96 53A6; water model: SPC [[6]](#6).
 
-6. Hsp90 em complexo com análogo de radicicol, código 2IWX. Campo
-   de forças: GROMOS96 53A6; modelo para a água: SPC [[6]](#6).
+6. Hsp90 complexed with radicicol analogue, code 2IWX. Force
+   field: GROMOS96 53A6; water model: SPC [[6]](#6).
 
-7. Hsp90 de levedura em complexo com o inibidor 7-O-carbamoilpremacbecina,
-   código 2VW5. Campo de forças: GROMOS96 53A6; modelo para a água: SPC [[6]](#6).
+7. Yeast Hsp90 complexed with the inhibitor 7-O-carbamoylpremacbecin,
+   code 2VW5. Force field: GROMOS96 53A6; water model: SPC [[6]](#6).
 
-8. Mutante E88G-N92L de Hsp90 em complexo com geldanamicina,
-   código 2YGE. Campo de forças: GROMOS96 53A6; modelo para a água: SPC [[6]](#6).
+8. Hsp90, E88G-N92L mutant, complexed with geldanamycin,
+   code 2YGE. Force field: GROMOS96 53A6; water model: SPC [[6]](#6).
 
-9. Série tricíclica de inibidores de Hsp90.
-   código 2YKI. Campo de forças: GROMOS96 53A6; modelo para a água: SPC [[6]](#6).
+9. Tricyclic series of Hsp90 inhibitors,
+   code 2YKI. Force field: GROMOS96 53A6; water model: SPC [[6]](#6).
 
-10. Mutante I50V de protease de HIV-1 em complexo com inibidor saquinavira.
-   código 3CYX. Campo de forças: CHARMM36; modelo para a água: TIP3P [[1]](#1)
+10. HIV-1 Protease, I50V mutant, complexed with inhibitor saquinavira.
+   code 3CYX. Force field: CHARMM36; water model: TIP3P [[1]](#1)
 
-11. Ribonuclease A em complexo com uridina 5'-fosfato, código 3DXG.
-   Campo de forças: CHARMM27; modelo para a água: TIP3P [[3]](#3).
+11. Ribonuclease A in complex with uridine 5'-phosphate, code 3DXG.
+   Force field: CHARMM27; water model: TIP3P [[3]](#3).
 
-12. β-lactoglobulina bovina em complexo com ácido cáprico, código 3NQ3.
-   Campo de forças: AMBER99SB; modelo para a água: TIP3P [[7](#7),[4](#4),[5](#5)].
+12. Bovine β-lactoglobuline in complex with capric acid, code 3NQ3.
+   Force field: AMBER99SB; water model: TIP3P [[7](#7),[4](#4),[5](#5)].
 
-13. Domínio SH2 da Grb2 em complexo com tripeptídeo, código 3OV1. Campo de
-   forças citado na literatura: CHARMM27; modelo para a água: TIP3P [[2]](#2).
+13. Grb2 SH2 domain in complex with tripeptide, code 3OV1. Force
+   field: CHARMM27; water model: TIP3P [[2]](#2).
 
-14. Domínio SH2 da Grb2 em complexo com tripeptídeo, código 3S8O. Campo de
-   forças citado na literatura: CHARMM27; modelo para a água: TIP3P [[2]](#2).
+14. Grb2 SH2 domain in complex with tripeptide, code 3S8O. Force
+   field: CHARMM27; water model: TIP3P [[2]](#2).
 
-15. Protease do HIV-1 em complexo com MKP97, código 4DJR. Campo de forças:
-   CHARMM36; modelo para a água: TIP3P [[1]](#1).
+15. HIV-1 Protease in complex with MKP97, code 4DJR. Force field:
+   CHARMM36; water model: TIP3P [[1]](#1).
 
-Essas proteínas foram simuladas em GROMACS 2021.4, de acordo com os
-comandos listados nos _scripts_ `<complexo>_gromacs.sh`, presentes
-em cada subdiretório desse diretório.
+These receptors where simulated in GROMACS 2021.4, according to the
+commands listed in the scripts `<complex>_gromacs.sh`, stored in each
+subdirectory of this directory.
 
-Foram utilizados como base arquivos `.mdp` escitos por J. Lemkul [[8]](#8),
-com algumas modificações, por exemplo para uso do campo de forças CHARMM36,
-como descrito na documentação do programa [[9]](#9).
+We utilized as a template some `.mdp` files written by J. Lemkul [[8]](#8),
+with a few modifications, _e.g._ for the use of the force field CHARMM36,
+as described in the documentation of the program [[9]](#9).
 
-Por fim, existe um campo de forças (`gromos53a6_hsd.ff`) nesse diretório.
-Foi criado a partir do campo de forças GROMOS96 53A6, distribuído com o
-próprio GROMACS, com uma pequena modificação: ao invés de histidina neutra
-protonada em D1 ser simbolizada pela abreviação "HISA", o é por "HSD", para
-garantir compatibilidade com arquivos provenientes de CHARMM-GUI [[10]](#10).
+Finally, there is a force field (`gromos53a6_hsd.ff`) in this directory.
+It was created from the force field GROMOS96 53A6, distributed with
+GROMACS itself, with a small modification: instead of neutral histidine,
+protonated in D1, being symbolized by the abbreviation "HISA", it is by "HSD",
+to assure compatibility with the files sourced from CHARMM-GUI [[10]](#10).
 
 
-Referências
------------
+References
+----------
 
 <a id="1">[1]</a>
 Perilla, J. R., & Schulten, K. (2017). Physical properties of the
