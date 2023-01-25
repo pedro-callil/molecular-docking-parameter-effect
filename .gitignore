@@ -29,4 +29,5 @@ GROMACS_LIGAND/*/grid.conf
 GROMACS/water_model_effect/*/gromos53a6_hsd.ff
 GROMACS/water_model_effect/gro_*
 GROMACS/water_model_effect/tmp_RMSDS.txt
+shared_receptors/*/*grid.conf
 
