@@ -1,12 +1,15 @@
 #! /bin/bash
 
+# This script executes docking simulations for receptors and ligands from
+# possibly different complexes.
+
 root_dir="$(git rev-parse --show-toplevel)"
 
 cd $root_dir
 
 cd shared_receptors
 
-for dir in $(ls | grep -v "groups.txt"); do
+for dir in $(ls | grep -v "groups.txt" | grep -v "README"); do
 	cd $dir;
 	list=$(ls | grep -v out_ | grep -v log_ | cut -d '_' -f 1 | sort | uniq)
 	for receptor in $list; do

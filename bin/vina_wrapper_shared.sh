@@ -1,6 +1,7 @@
 #! /bin/bash
 
 # This script calls vina with the box arguments found in file grid.conf
+# (adapted to use different receptor and ligand from different complexes).
 
 RECEPTOR="$1" # receptor file to be used
 LIGAND="$2" # ligand file to be used
